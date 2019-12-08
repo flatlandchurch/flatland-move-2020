@@ -8,7 +8,8 @@
   },
   "scripts": {
     "build:css": "sass ./src/styles/index.scss public/style.css",
-    "prettier": "prettier *.{js,css,json,md,html} --write"
+    "start:css": "sass --watch ./src/styles/index.scss public/style.css",
+    "prettier": "prettier **/*.{js,css,scss,json,md,html} --write"
   },
   "husky": {
     "hooks": {
@@ -17,7 +18,7 @@
   },
   "prettier": "@dmsi/prettier-config",
   "lint-staged": {
-    "*.{js,css,json,md,html}": [
+    "*.{js,css,scss,json,md,html}": [
       "prettier --write",
       "git add"
     ]

@@ -1,7 +1,28 @@
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+* {
   margin: 0;
   padding: 0;
 }
 
+:root {
+  --accent-blue: #0202f9;
+  --accent-pink: #ff3562;
+  --accent-yellow: #f7cb15;
+
+  --bg-teal: #84bcda;
+  --bg-teal_dark: #067bc2;
+  --bg-teal_darkest: #004a8c;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  position: relative;
+}
+
+section {
+  background: #030a10;
+}
+
 @import 'jumbo';
+@import 'main';
+@import 'missions';

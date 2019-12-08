@@ -81,7 +81,7 @@
   }
 
   span:first-child {
-    animation: appear 2s ease-in forwards .5s;
+    animation: appear 2s ease-in forwards 0.5s;
   }
 
   span:last-child {
@@ -108,5 +108,24 @@
   to {
     opacity: 1;
     transform: translateZ(1px);
+  }
+}
+
+.button-bar {
+  position: absolute;
+  bottom: -20px;
+  width: 100%;
+
+  a {
+    display: block;
+    width: max-content;
+    padding: 12px 24px;
+    border-radius: 50px;
+    background: #fff;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px -6px rgba(0, 0, 0, 0.5);
   }
 }
