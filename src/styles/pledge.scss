@@ -1,0 +1,24 @@
+section.pledge {
+  background: #fff;
+  margin-top: 48px;
+
+  h2 {
+    position: relative;
+    font-size: 48px;
+    margin-bottom: 24px;
+    text-align: center;
+
+    &::before {
+      content: '•••';
+      position: absolute;
+      top: -64px;
+      color: var(--accent-pink);
+      font-size: 14px;
+      letter-spacing: 10px;
+      text-align: center;
+      width: 100%;
+      box-sizing: border-box;
+      left: 0;
+    }
+  }
+}

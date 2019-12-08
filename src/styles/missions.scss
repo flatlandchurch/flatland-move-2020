@@ -3,7 +3,7 @@ header.project-headers {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  padding: 24px;
+  padding: 12px 24px;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, max-content));
   justify-content: space-between;
@@ -12,15 +12,23 @@ header.project-headers {
   margin-left: auto;
   font-size: 16px;
   font-weight: 100;
-  border-bottom: 1px solid #000;
-  background: var(--bg-teal);
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+
+  &.missions {
+    background: var(--bg-teal);
+  }
+
+  &.leader {
+    background: var(--bg-red);
+  }
 
   @media screen and (min-width: 768px) {
     font-size: 24px;
   }
 }
 
-section.missions {
+section.missions,
+section.leader {
   background: #fff;
   position: relative;
 }
@@ -30,6 +38,14 @@ section.missions {
   padding: 60px 24px 200px;
   box-sizing: border-box;
   line-height: 1.5;
+
+  &.mission {
+    background: var(--bg-teal);
+  }
+
+  &.leader {
+    background: var(--bg-red);
+  }
 
   p {
     font-size: 20px;
@@ -47,10 +63,6 @@ section.missions {
       text-align: center;
     }
   }
-}
-
-.color-border.mission {
-  background: var(--bg-teal);
 }
 
 .projects-column {
@@ -95,7 +107,6 @@ section.missions {
 
   .card-body {
     padding: 24px;
-    background: var(--bg-teal_dark);
     position: relative;
     color: #fff;
     display: grid;
@@ -109,12 +120,24 @@ section.missions {
       transform: rotate(45deg);
       transform-origin: center;
       border-radius: 4px;
-      background: var(--bg-teal_dark);
       display: block;
       position: absolute;
       top: -7.5px;
       left: calc(50% - 7.5px);
       z-index: 0;
+    }
+
+    &.mission {
+      background: var(--bg-teal_dark);
+      &::before {
+        background: var(--bg-teal_dark);
+      }
+    }
+    &.leader {
+      background: var(--bg-red_dark);
+      &::before {
+        background: var(--bg-red_dark);
+      }
     }
   }
 }
@@ -138,5 +161,13 @@ section.missions {
     font-weight: bold;
     letter-spacing: 1.1px;
     line-height: 1.2;
+
+    &:last-of-type {
+      margin-top: 12px;
+    }
+  }
+
+  ul {
+    margin-left: 24px;
   }
 }

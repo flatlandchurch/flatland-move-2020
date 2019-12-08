@@ -11,12 +11,17 @@
   --bg-teal: #84bcda;
   --bg-teal_dark: #067bc2;
   --bg-teal_darkest: #004a8c;
+
+  --bg-red: #c33c54;
+  --bg-red_dark: #891026;
 }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
     'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   position: relative;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 section {
@@ -26,3 +31,4 @@ section {
 @import 'jumbo';
 @import 'main';
 @import 'missions';
+@import 'pledge';
