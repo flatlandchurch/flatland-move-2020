@@ -11,7 +11,7 @@
     "sass": "^1.23.7"
   },
   "scripts": {
-    "build": "yarn build:js && yarn build:css",
+    "build": "yarn build:js --sourcemap=false && yarn build:css",
     "build:js": "microbundle -o ./public -f umd",
     "build:css": "sass ./src/styles/index.scss public/style.css",
     "start:css": "sass --watch ./src/styles/index.scss public/style.css",

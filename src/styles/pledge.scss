@@ -21,4 +21,14 @@ section.pledge {
       left: 0;
     }
   }
+
+  & > p {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    line-height: 1.5;
+    max-width: 882px;
+    width: 90%;
+    margin: 0 auto 24px;
+  }
 }
