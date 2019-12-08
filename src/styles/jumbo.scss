@@ -1,0 +1,112 @@
+#app {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.jumbo {
+  height: 90vh;
+  position: relative;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.move-circle-container {
+  position: absolute;
+  width: 100vw;
+  height: 100vw;
+  top: calc(50% - 50vw);
+  left: calc(50% - 50vw);
+
+  @media screen and (min-width: 768px) {
+    width: 75vw;
+    height: 75vw;
+    top: calc(50% - 37.5vw);
+    left: calc(50% - 37.5vw);
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 60vh;
+    height: 60vh;
+    top: calc(50% - 30vh);
+    left: calc(50% - 30vh);
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .outer {
+    stroke: #fff;
+    fill: transparent;
+    stroke-width: 2;
+    stroke-dasharray: calc(180 * 3.1415);
+    stroke-dashoffset: calc(180 * 3.14);
+    animation: sweep 2s ease-in forwards;
+  }
+}
+
+.circle-text-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-text {
+  width: max-content;
+  color: #fff;
+  line-height: 0.9;
+  font-size: 48px;
+
+  span {
+    opacity: 0;
+    transform: perspective(500px) translateZ(-20px);
+    animation: appear 2s ease-in forwards 1.2s;
+    display: block;
+  }
+
+  span:nth-child(odd) {
+    font-weight: 100;
+    font-size: 24px;
+    display: block;
+  }
+
+  span:first-child {
+    animation: appear 2s ease-in forwards .5s;
+  }
+
+  span:last-child {
+    text-align: right;
+    animation: appear 2s ease-in forwards 1.75s;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 64px;
+
+    span:nth-child(odd) {
+      font-size: 48px;
+    }
+  }
+}
+
+@keyframes sweep {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+    transform: translateZ(1px);
+  }
+}
