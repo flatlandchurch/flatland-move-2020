@@ -1,12 +1,18 @@
 {
+  "name": "flatland-move-2020",
+  "main": "public/flatland-move-2020.js",
+  "source": "src/main.js",
   "devDependencies": {
     "@dmsi/prettier-config": "^1.3.0",
     "husky": "^3.1.0",
     "lint-staged": "^9.5.0",
+    "microbundle": "^0.11.0",
     "prettier": "^1.19.1",
     "sass": "^1.23.7"
   },
   "scripts": {
+    "build": "yarn build:js && yarn build:css",
+    "build:js": "microbundle -o ./public -f umd",
     "build:css": "sass ./src/styles/index.scss public/style.css",
     "start:css": "sass --watch ./src/styles/index.scss public/style.css",
     "prettier": "prettier **/*.{js,css,scss,json,md,html} --write"
