@@ -80,6 +80,7 @@ const handleSubmit = async (e) => {
     <div class="bless"><span role="img" aria-label="Praying Hands">🙏</span></div>
     <h2>Thank you for being a Mover!</h2>
     <p>We'll keep you posted with regular updates about how the move is going. You can check back here as the money comes in, we'll track how close we're getting to each goal.</p>
+    <p>Also, be sure to check your email, we'll send you a confirmation regarding your pledge.</p>
   `;
 };
 
