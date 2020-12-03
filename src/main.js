@@ -63,7 +63,10 @@ const handleSubmit = async (e) => {
       if (!parseInt(field.name, 10)) {
         body.person[field.name] = field.value;
       } else {
-        body.fields.push({ id: field.name, value: parseFloat(field.value.replace(/\$/g, '')) });
+        body.fields.push({
+          id: field.name,
+          value: Number(field.value.replace(/\$/g, '').replace(/,/g, '')),
+        });
       }
     }
   }
@@ -97,7 +100,7 @@ async function buildForm(formID) {
   fields.data.forEach(({ attributes, id }) => {
     form.append(
       createInput(
-        attributes.field_type === 'custom_field' ? 'text' : attributes.field_type,
+        attributes.field_type === 'custom_field' ? 'tel' : attributes.field_type,
         attributes.label,
         id,
         attributes.required,
